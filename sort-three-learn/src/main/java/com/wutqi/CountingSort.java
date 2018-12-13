@@ -56,7 +56,7 @@ public class CountingSort {
             //数据在r中的下标
             int index = c[arr[i]]-1;
             r[index] = arr[i];
-            //在将数据放到有序数组后，存储的数据个数要减一
+            //在将数据放到有序数组后，存储的数据个数要减一8
             c[arr[i]]--;
         }
 

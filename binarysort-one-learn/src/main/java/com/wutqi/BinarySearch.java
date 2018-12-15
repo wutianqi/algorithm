@@ -9,8 +9,8 @@ public class BinarySearch {
 
     public static void main(String[] args) {
         int[] arr = {1,2,3,4,9,11,22,33};
-//        int value = binarySearch(arr,33);//7
-        int value = binarySearch_recursive(arr,0, arr.length - 1,1);
+//        int value = binarySearch(arr,1);//7
+        int value = binarySearch_recursive(arr,0, arr.length - 1,4);
         System.out.println(value);
     }
 
@@ -25,7 +25,7 @@ public class BinarySearch {
         int max = arr.length - 1;
 
         while(min <= max){
-            int mid = min + ((max - min) >> 2);
+            int mid = min + ((max - min) >> 1);
 
             if(arr[mid] == value){
                 return mid;
@@ -52,7 +52,7 @@ public class BinarySearch {
             return -1;
         }
 
-        int mid = min + ((max - min) >> 2);
+        int mid = min + ((max - min) >> 1);
         if(arr[mid] == value){
             return mid;
         }
